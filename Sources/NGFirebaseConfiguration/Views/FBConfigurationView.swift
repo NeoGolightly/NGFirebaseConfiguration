@@ -7,12 +7,6 @@
 
 import SwiftUI
 import Observation
-import SwiftData
-
-public protocol FBStore: AnyObject, Observable {
-  init()
-}
-
 
 /// A view wrapper for Firebase configurations
 ///
@@ -22,7 +16,7 @@ public struct FBConfigurationView<Content, Store>: View where Content: View, Sto
   private let content: () -> Content
   /// Creates a new FBConfigurationView
   /// - Parameters:
-  ///   - store: Your data container. It is injected into the enviroment. So don't inject it yourself!!!
+  ///   - store: Your data container. Let your store class inherit ``FBStore``. It is injected into the enviroment. *So don't inject it yourself!!!*
   ///   - options: Set the Firebase options
   ///   - useEmulator: Select if you want to use the emulator
   ///   - server: Sets the server for your Firebase project

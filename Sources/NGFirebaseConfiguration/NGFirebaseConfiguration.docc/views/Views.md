@@ -7,4 +7,8 @@ SwiftUI helper views to wrap your Firebase App
 
 ## Topics
 
+### Views
 - ``FBConfigurationView``
+
+### Protocols
+- ``FBStore``
