@@ -24,7 +24,7 @@ public struct FBConfigurationView<Content, Store: AnyObject>: View  where Conten
   public init(store: Bindable<Store>,
               options: FBOptions,
               useEmulator: Bool = false,
-              emulatorOptions: FBEmulatorOptions? = nil, @ViewBuilder content: @escaping () -> Content) {
+              emulatorOptions: FBEmulatorOptions = .defaultOptions(), @ViewBuilder content: @escaping () -> Content) {
     FBConfiguration.configure(options: options, useEmulator: useEmulator, emulatorOptions: emulatorOptions)
     self._store = store
     self.content = content
