@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: ["main"]
     
+# Allow one concurrent deployment
+concurrency:
+  group: "build"
+  cancel-in-progress: true
+    
 env:
   SCHEME: NGFirebaseConfiguration
 
