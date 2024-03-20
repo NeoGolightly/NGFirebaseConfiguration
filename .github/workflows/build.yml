@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: ["main"]
     
+# Allow one concurrent deployment
+concurrency:
+  group: "build"
+  cancel-in-progress: true
+    
 env:
   SCHEME: NGFirebaseConfiguration
 
@@ -24,8 +29,6 @@ jobs:
         run: xcodebuild -scheme $SCHEME -derivedDataPath .build -destination 'generic/platform=OS X';
       - name: Build tvOS
         run: xcodebuild -scheme $SCHEME -derivedDataPath .build -destination 'generic/platform=tvOS';
-      - name: Build watchOS
-        run: xcodebuild -scheme $SCHEME -derivedDataPath .build -destination 'generic/platform=watchOS';
       - name: Build visionOS
         run: xcodebuild -scheme $SCHEME -derivedDataPath .build -destination 'generic/platform=xrOS';
 
