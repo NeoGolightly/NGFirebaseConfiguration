@@ -78,10 +78,10 @@ public struct FBOptions {
               projectID: String,
               bundleID: String,
               storageBucket: String,
-              clientID: String?,
-              databaseURL: String?,
-              deepLinkURLScheme: String?,
-              appGroupID: String?) {
+              clientID: String? = nil,
+              databaseURL: String? = nil,
+              deepLinkURLScheme: String? = nil,
+              appGroupID: String? = nil) {
     self.googleAppID = googleAppID
     self.gcmSenderID = gcmSenderID
     self.apiKey = apiKey
