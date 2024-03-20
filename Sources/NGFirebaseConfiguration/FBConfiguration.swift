@@ -11,7 +11,7 @@ import FirebaseStorage
 import FirebaseFunctions
 import FirebaseDatabase
 
-/// Firebase base configuration
+/// Firebase configuration
 ///
 /// An easy way to start your Firebase project without a AppDelegate.
 public struct FBConfiguration {
