@@ -12,7 +12,7 @@ import Observation
 ///
 /// Use this view to wrap it around your base content view or in #preview for testing
 public struct FBConfigurationView<Content, Store>: View where Content: View, Store: FBStore {
-  @State var store: Store
+  @State private var store: Store
   private let content: () -> Content
   /// Creates a new FBConfigurationView
   /// - Parameters:
@@ -35,3 +35,6 @@ public struct FBConfigurationView<Content, Store>: View where Content: View, Sto
       .environment(store)
   }
 }
+
+
+
