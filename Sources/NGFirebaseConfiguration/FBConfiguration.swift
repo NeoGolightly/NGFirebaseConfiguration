@@ -32,7 +32,7 @@ public struct FBConfiguration {
           Auth.auth().useEmulator(withHost: emulatorOptions.server, port: authPort)
         }
         // Firestore emulator configuration
-        if let firestorePort = emulatorOptions.authPort {
+        if let firestorePort = emulatorOptions.firestorePort {
           Firestore.firestore().useEmulator(withHost: emulatorOptions.server, port: firestorePort)
           let settings = Firestore.firestore().settings
           settings.cacheSettings = MemoryCacheSettings()
