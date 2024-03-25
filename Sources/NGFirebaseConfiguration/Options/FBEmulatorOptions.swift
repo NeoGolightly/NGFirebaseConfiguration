@@ -38,10 +38,10 @@ public struct FBEmulatorOptions {
   ///   - functionsPort: Functions emulator port number
   ///   - storagePort: Storage emulator port number
   public init(server: String = "localhost",
-              firestorePort: Int?,
-              authPort: Int?,
-              functionsPort: Int?,
-              storagePort: Int?) {
+              firestorePort: Int? = nil,
+              authPort: Int? = nil,
+              functionsPort: Int? = nil,
+              storagePort: Int? = nil) {
     self.server = server
     self.firestorePort = firestorePort
     self.authPort = authPort
